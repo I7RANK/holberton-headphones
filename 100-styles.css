@@ -3,6 +3,8 @@
     --primary-color: #FF6565;
     --primary-text-color: #fff;
     --secondary-text-color: #000;
+
+    --primary-color-pentagon: #ff565e;
 }
 
 * {
@@ -286,6 +288,42 @@ form .form-button {
     box-shadow: none;
 }
 
+/* ============ FOOTER ============ */
+.footer {
+    background: #071629;
+    width: 100%;
+    min-height: 249px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.footer div.content {
+    justify-content: space-between;
+    margin-top: 91.76px;
+}
+
+.footer div.content .social-icons {
+    min-width: 130px;
+    height: 30px;
+    font-size: 1.875rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer div.content .social-icons span {
+    display: flex;
+}
+
+.footer div.copyright {
+    margin-bottom: 39px;
+    font-family: 'Source Sans Pro';
+    font-size: .75rem;
+    color: #5e6874;
+}
+
+/* ============ RESPONSIVE ============ */
 @media (max-width: 768px) {
     section div.content {
         width: 70%;
@@ -392,6 +430,18 @@ form .form-button {
     .banner-section {
         min-height: 869px;
     }
+
+    /* ============ FOOTER ============ */
+    .footer div.content {
+        margin-top: 48px;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .footer div.content .social-icons {
+        max-width: 130px;
+        margin: 45px 0;
+    }
 }
 
 @keyframes show-menu {
@@ -429,4 +479,31 @@ form .form-button {
 @font-face {
     font-family: 'spin_cycle_otregular';
     src: url('fonts/spincycle_ot-webfont.woff') format('woff');
+}
+
+/* =========== PENTAGON =========== */
+.pentagon {
+    position: absolute;
+    box-sizing: border-box;
+    width: 190px;
+    height: 0;
+    border-top: 117.5px solid var(--primary-color-pentagon);
+    border-left: 36px solid transparent;
+    border-right: 36px solid transparent;
+    margin-top: calc(190px - 117.5px);
+    z-index: -1;
+}
+
+.pentagon::before {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -190px;
+    left: -36px;
+    content: "";
+    box-sizing: border-box;
+    border-bottom: calc(190px - 117.5px) solid var(--primary-color-pentagon);
+    border-left: calc(190px / 2) solid transparent;
+    border-right: calc(190px / 2) solid transparent;
+    z-index: -1;
 }

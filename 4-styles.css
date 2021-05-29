@@ -276,7 +276,7 @@ input:focus + label {
     top: -20px;
 }
 
-input:not(:placeholder-shown) + label {
+.form-group input:not(:placeholder-shown) + label {
     top: -20px;
 }
 
