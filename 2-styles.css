@@ -1,0 +1,362 @@
+/* ============ GLOBAL ============ */
+:root {
+    --primary-color: #FF6565;
+    --primary-text-color: #fff;
+    --secondary-text-color: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Source Sans Pro light';
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: var(--primary-text-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    transition: color .3s ease;
+}
+a:hover, a:active {
+    color: var(--primary-color);
+}
+
+li {
+    list-style: none;
+}
+
+.content {
+    width: 80%;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.content-info {
+    width: 85%;
+    max-width: 637px;
+    text-align: center;
+}
+
+.h2-subtitle {
+    font-family: 'Source Sans Pro semibold';
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.p-desc {
+    line-height: 1.625em;
+}
+
+/* =========== HEADER =========== */
+.header {
+    position: absolute;
+    top: 27.76px;
+    height: 32px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.header input, .header label {
+    display: none;
+}
+
+.div-logo a img {
+    height: 32px;
+}
+
+.main-navbar ul {
+    height: 100%;
+    width: 255px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .75rem;
+    font-weight: bold;
+}
+
+/* =========== MAIN =========== */
+main {
+    width: 100%;
+}
+
+main section {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ---------- BANNER-SECTION ---------- */
+.banner-section {
+    min-height: 800px;
+}
+
+.img-banner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.banner-section .div-info-banner-section {
+    margin-top: 372px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div-info-banner-section h1 {
+    font-family: 'Source Sans Pro bold';
+    font-size: 2rem;
+}
+
+.div-info-banner-section .p-subtitle {
+    font-family: 'Source Sans Pro bold';
+    font-weight: bold;
+}
+
+.div-info-banner-section button {
+    background: var(--primary-color);
+    width: 162px;
+    height: 44px;
+    margin: 40px 0 65px 0;
+    font-family: 'Source Sans Pro bold';
+    color: var(--primary-text-color);
+    font-size: .875rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 200px;
+    box-shadow: 0 0 20px #000000a1;
+    transition: opacity .08s ease;
+}
+
+.div-info-banner-section button:hover {
+    opacity: .9;
+}
+
+/* =========== WHAT-WE-DO-SECTION =========== */
+.what-we-do-section {
+    color: var(--secondary-text-color);
+}
+
+.what-we-do-section div.content-info {
+    margin: 110px 0 97px 0;
+}
+
+.what-we-do-section div.content-info .p-desc {
+    font-family: 'Source Sans Pro';
+}
+
+/* ------------- DIV-WHAT-WE-DO-ICONS ------------- */
+.div-what-we-do-icons {
+    margin-bottom: 110px;
+}
+
+.icons-content {
+    max-width: 207px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+
+.icons-content span {
+    font-size: 6.875rem;
+    color: var(--primary-color);
+}
+
+.icons-content h3 {
+    font-family: 'Source Sans Pro semibold';
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+}
+
+.icons-content p {
+    font-family: 'Source Sans Pro';
+    line-height: 1.625em;
+    font-size: .875rem;
+}
+
+/* =========== OUR-RESULTS-SECTION =========== */
+.our-results-section div.content-info {
+    margin: 141px 0 56px 0;
+}
+
+.div-our-results-icons {
+    margin-bottom: 79px;
+}
+
+.div-our-results-icons .icons-content {
+    position: relative;
+    min-width: 190px;
+    min-height: 190px;
+    justify-content: center;
+}
+
+.div-our-results-icons .icons-content img {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.div-our-results-icons .icons-content p:nth-child(2) {
+    font-family: 'Source Sans Pro bold';
+    font-size: 2.875rem;
+}
+
+@media (max-width: 768px) {
+    section div.content {
+        width: 70%;
+        min-height: 469px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        width: 95%;
+        max-width: 1000px;
+    }
+
+    .content-info {
+        width: 95%;
+        max-width: 637px;
+    }
+
+    section div.content {
+        justify-content: center;
+    }
+
+    .header {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-navbar {
+        position: absolute;
+        top: 32px;
+        display: none;
+    }
+
+    .main-navbar ul {
+        flex-direction:column;
+    }
+
+    .main-navbar ul li {
+        margin: 20px 0;
+    }
+
+    .icons-content:nth-child(n+2) {
+        margin-top: 96px;
+    }
+
+    /* --------------- BTN-MAIN-NAVBAR ----------------- */
+    .header .btn-main-navbar {
+        background: #fff;
+        width: 13px;
+        height: 2px;
+        display: block;
+        position: absolute;
+        left: 20px;
+        transition: width .3s ease;
+    }
+
+    .header .btn-main-navbar::before,
+    .header .btn-main-navbar::after {
+        content: "";
+        background: #fff;
+        height: 2px;
+        display: block;
+        position: absolute;
+        transition: transform .3s ease;
+    }
+
+    .header .btn-main-navbar::before {
+        top: -6px;
+        width: 20px;
+    }
+
+    .header .btn-main-navbar::after {
+        top: 6px;
+        width: 18px;
+    }
+
+    .header .check-main-navbar:checked~.main-navbar {
+        display: block;
+        animation: show-menu .3s ease;
+    }
+
+    .header .check-main-navbar:checked+.btn-main-navbar {
+       width: 0;
+    }
+
+    .header .check-main-navbar:checked+.btn-main-navbar::before {
+       transform: rotate(-45deg);
+    }
+
+    .header .check-main-navbar:checked+.btn-main-navbar::after {
+       transform: rotate(45deg);
+       width: 20px;
+    }
+
+    .header .check-main-navbar:checked+.btn-main-navbar::before,
+    .header .check-main-navbar:checked+.btn-main-navbar::after {
+        top: 0;
+    }
+
+    .img-banner {
+        object-position: -390px;
+    }
+
+    .banner-section {
+        min-height: 869px;
+    }
+}
+
+@keyframes show-menu {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* =========== FONTS =========== */
+@font-face {
+    font-family: 'Source Sans Pro light';
+    src: url('fonts/SourceSansPro-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Source Sans Pro bold';
+    src: url('fonts/SourceSansPro-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Source Sans Pro semibold';
+    src: url('fonts/SourceSansPro-Semibold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('fonts/SourceSansPro-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'spin_cycle_otregular';
+    src: url('fonts/spincycle_ot-webfont.woff') format('woff');
+}
